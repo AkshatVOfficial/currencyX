@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CurrencyX</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- header section -->
+    <header>
+      <nav>
+        <div>
+          <img src="" alt="" />
+          <h1>Currency<span>X</span></h1>
+        </div>
+        <div>
+          <i
+            class="fa-solid fa-circle-half-stroke"
+            style="color: rgb(0, 0, 0)"
+          ></i>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- this is the navbar -->
+      <section class="hero">
+        <h1>Currency Converter</h1>
+        <p>
+          Convert currencies with real-time exchange rates<br />fast, accurate,
+          and reliable.
+        </p>
+      </section>
+
+      <div class="box">
+        <form>
+          <div class="container">
+            <!-- this is the from section  -->
+            <section class="in-container">
+              <label for="from">From</label>
+              <div class="currency-select">
+                <div>
+                  <img src="https://flagsapi.com/US/flat/64.png" alt="Flag" />
+                  <select
+                    name="from-option"
+                    class="currency"
+                    id="from"
+                  ></select>
+                </div>
+              </div>
+              <input
+                class="converted-from"
+                value="1000"
+                type="number"
+                id="from"
+                placeholder="Enter Amount"
+              />
+            </section>
+
+            <i class="fa-solid fa-arrow-right-arrow-left"></i>
+
+            <!-- this is the TO section  -->
+            <section class="in-container">
+              <label for="to">To</label>
+              <div class="currency-select">
+                <div>
+                  <img src="https://flagsapi.com/IN/flat/64.png" alt="Flag" />
+                  <select name="to-option" class="currency" id="to"></select>
+                </div>
+              </div>
+              <input
+                class="converted-to"
+                type="number"
+                id="to"
+                placeholder="Converted Amount"
+              />
+            </section>
+          </div>
+          <div class="btn">
+            <button type="button">Convert Currency</button>
+          </div>
+        </form>
+      </div>
+
+      <section class="info-bar">
+        <div>
+          <h2>Exchange Rate</h2>
+          <p class="msg">1 USD = 95.12 INR</p>
+        </div>
+
+        <div>
+          <h2>Last Updated</h2>
+          <p>Jun 15, 2026</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p></p>
+    </footer>
+
+    <script src="code.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

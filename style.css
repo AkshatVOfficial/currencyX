@@ -1,0 +1,282 @@
+:root {
+  /* Background */
+  --bg-start: #eef2ff;
+  --bg-middle: #f5f7ff;
+  --bg-end: #f8fafc;
+
+  /* Text */
+  --text-color: #000000;
+
+  /* Logo Gradient */
+  --logo-blue: #1059ec;
+  --logo-purple: #3414e6;
+  --logo-dark: #111114;
+
+  /* Hero Gradient */
+  --hero-dark: #2e156d;
+  --hero-purple: #3414e6;
+  --hero-blue: #042863;
+
+  /* Cards */
+  --card-shadow: rgba(30, 31, 112, 0.25);
+  --body-shadow: rgba(255, 255, 255, 0.793);
+
+  /* Borders */
+  --border-color: rgba(0, 0, 0, 0.4);
+
+  /* Info Bar */
+  --info-bg: rgba(73, 114, 217, 0.257);
+  --info-color: #155ff2;
+
+  /* Buttons */
+  --btn-bg: rgba(108, 116, 171, 0.168);
+  --btn-color: #220dc1;
+
+  /* Icon */
+  --icon-color: rgb(20, 63, 96);
+}
+body.dark {
+  /* Background */
+  --bg-start: #07111f;
+  --bg-middle: #0b1729;
+  --bg-end: #101c31;
+
+  /* Text */
+  --text-color: #f8fafc;
+
+  /* Logo Gradient */
+  --logo-blue: #ffffff;
+  --logo-purple: #1e4bff;
+  --logo-dark: #3b82f6;
+
+  /* Hero Gradient */
+  --hero-dark: #5ea1ff;
+  --hero-purple: #1e4bff;
+  --hero-blue: #3b82f6;
+
+  /* Containers */
+  --container: rgba(17, 24, 39, 0.95);
+
+  /* Shadows */
+  --card-shadow: rgba(0, 0, 0, 0.3);
+  --body-shadow: rgba(0, 0, 0, 0.3);
+
+  /* Borders */
+  --border-color: rgba(139, 160, 189, 0.478);
+
+  /* Info Bar */
+  --info-bg: rgba(17, 24, 39, 0.95);
+  --info-color: #1e83ff;
+
+  /* Buttons */
+  --btn-bg: rgba(59, 130, 246, 0.18);
+  --btn-color: #93c5fd;
+
+  /* Icons */
+  --icon-color: #60a5fa;
+}
+
+* {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  padding: 0%;
+  margin: 0%;
+}
+
+body {
+  background: linear-gradient(
+    180deg,
+    var(--bg-start) 0%,
+    var(--bg-middle) 40%,
+    var(--bg-end) 100%
+  );
+  margin: 0.3rem 1.1rem;
+  min-height: 100vh;
+  border-radius: 1rem;
+  box-shadow: 0 0 15px 5px var(--body-shadow);
+  color: var(--text-color);
+}
+
+i {
+  margin: auto;
+  margin-top: 0.7rem;
+  padding: 0.7rem;
+  cursor: pointer;
+  color: var(--icon-color);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 10px;
+}
+
+h1 span {
+  background: linear-gradient(
+    90deg,
+    var(--logo-blue) 0%,
+    var(--logo-purple) 40%,
+    var(--logo-dark) 100%
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero {
+  margin: 3rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.7rem;
+  background: linear-gradient(
+    90deg,
+    var(--hero-dark) 0%,
+    var(--hero-purple) 40%,
+    var(--hero-blue) 100%
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+  font-size: 1.1rem;
+}
+
+.container {
+  margin: 2rem 20rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 15px 5px var(--card-shadow);
+  display: flex;
+  justify-content: space-between;
+  gap: 3px;
+  background-color: var(--container);
+}
+
+.in-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.in-container img {
+  width: 2.2rem;
+}
+
+.currency-select {
+  display: flex;
+}
+
+.currency-select div {
+  padding: 5px;
+  display: flex;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+}
+
+#to-currency,
+#from-currency {
+  border: none;
+  background-color: transparent;
+}
+
+.info-bar {
+  margin: 2rem 20rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: var(--info-bg);
+  color: var(--info-color);
+  display: flex;
+  justify-content: space-around;
+  box-shadow: 0 0 20px 1px var(--body-shadow);
+}
+
+form select {
+  border: none;
+  background-color: var(--container);
+  outline: none;
+  color: var(--text-color);
+}
+
+form input {
+  padding: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  background-color: transparent;
+  outline: none;
+  color: var(--text-color);
+}
+
+@media (max-width: 1165px) {
+  .container {
+    margin: 2rem 7rem;
+  }
+  .info-bar {
+    margin: 2rem 7rem;
+  }
+}
+
+@media (max-width: 765px) {
+  body {
+    margin: 0%;
+  }
+
+  nav {
+    font-size: 0.8rem;
+  }
+
+  .hero {
+    margin: 1rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+  }
+
+  .info-bar {
+    margin: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .info-bar h2 {
+    font-size: 1.2rem;
+  }
+
+  .info-bar p {
+    font-size: 0.85rem;
+  }
+}
+
+.btn {
+  text-align: center;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  border-radius: 0.3rem;
+  padding: 0.2rem;
+  outline: none;
+  background-color: var(--btn-bg);
+  color: var(--btn-color);
+  transition: transform 0.3s ease-in-out;
+}
+
+button:active {
+  transform: scale(1.1);
+}
