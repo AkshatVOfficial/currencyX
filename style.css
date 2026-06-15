@@ -131,7 +131,7 @@ h1 span {
 }
 
 .hero h1 {
-  font-size: 2.7rem;
+  font-size: 2.5rem;
   background: linear-gradient(
     90deg,
     var(--hero-dark) 0%,
@@ -144,7 +144,7 @@ h1 span {
 }
 
 .hero p {
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 .container {
@@ -279,4 +279,16 @@ button {
 
 button:active {
   transform: scale(1.1);
+}
+
+footer {
+  margin-top: 2rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+footer p {
+  color: var(--text-color);
+  opacity: 0.7;
+  font-size: 0.9rem;
 }

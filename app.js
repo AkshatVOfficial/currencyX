@@ -55,13 +55,9 @@ async function updateCurrency() {
   let data = await res.json();
   let value = await data.rates;
   let final = await value[toCurrency];
-  console.log(data);
-  console.log(final);
   toConvert.value = fromConvert.value * final;
-  console.log(msg);
   msg.innerText = `1 ${fromCurrency} = ${final} ${toCurrency}`;
 }
-
 const switchCurr = () => {
   let fromCurrency = from.value;
   from.value = to.value;
