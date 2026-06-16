@@ -83,6 +83,9 @@ body.dark {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   background: linear-gradient(
     180deg,
     var(--bg-start) 0%,
@@ -94,6 +97,10 @@ body {
   border-radius: 1rem;
   box-shadow: 0 0 15px 5px var(--body-shadow);
   color: var(--text-color);
+}
+
+main {
+  flex: 1; /* Pushes the footer down */
 }
 
 i {
@@ -291,4 +298,9 @@ footer p {
   color: var(--text-color);
   opacity: 0.7;
   font-size: 0.9rem;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Takes full screen height */
 }
