@@ -10,7 +10,7 @@
   /* Logo Gradient */
   --logo-blue: #1059ec;
   --logo-purple: #3414e6;
-  --logo-dark: #111114;
+  --logo-dark: #2a2a93;
 
   /* Hero Gradient */
   --hero-dark: #2e156d;
@@ -45,9 +45,9 @@ body.dark {
   --text-color: #f8fafc;
 
   /* Logo Gradient */
-  --logo-blue: #ffffff;
+  --logo-blue: #001eff;
   --logo-purple: #1e4bff;
-  --logo-dark: #3b82f6;
+  --logo-dark: #366cc4;
 
   /* Hero Gradient */
   --hero-dark: #5ea1ff;
@@ -77,30 +77,42 @@ body.dark {
 }
 
 * {
+  box-sizing: border-box;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   padding: 0%;
   margin: 0%;
 }
 
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
 body {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  height: 100dvh;
   background: linear-gradient(
     180deg,
     var(--bg-start) 0%,
     var(--bg-middle) 40%,
     var(--bg-end) 100%
   );
-  margin: 0.3rem 1.1rem;
-  min-height: 100vh;
+  margin: 0;
+  padding: 0.3rem 1.1rem;
+  overflow: hidden;
   border-radius: 1rem;
   box-shadow: 0 0 15px 5px var(--body-shadow);
   color: var(--text-color);
 }
 
 main {
-  flex: 1; /* Pushes the footer down */
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: clamp(0.75rem, 2vh, 1.5rem);
 }
 
 i {
@@ -131,7 +143,7 @@ h1 span {
 }
 
 .hero {
-  margin: 3rem;
+  margin: 0 1rem;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -155,7 +167,8 @@ h1 span {
 }
 
 .container {
-  margin: 2rem 20rem;
+  width: min(100%, 42rem);
+  margin: 0 auto;
   padding: 1rem;
   border-radius: 1rem;
   box-shadow: 0 0 15px 5px var(--card-shadow);
@@ -193,7 +206,8 @@ h1 span {
 }
 
 .info-bar {
-  margin: 2rem 20rem;
+  width: min(100%, 42rem);
+  margin: 0 auto;
   padding: 1rem;
   border-radius: 1rem;
   background-color: var(--info-bg);
@@ -221,16 +235,17 @@ form input {
 
 @media (max-width: 1165px) {
   .container {
-    margin: 2rem 7rem;
+    width: min(100%, 36rem);
   }
   .info-bar {
-    margin: 2rem 7rem;
+    width: min(100%, 36rem);
   }
 }
 
 @media (max-width: 765px) {
   body {
-    margin: 0%;
+    padding: 0.35rem 0.8rem;
+    border-radius: 0;
   }
 
   nav {
@@ -238,11 +253,11 @@ form input {
   }
 
   .hero {
-    margin: 1rem;
+    margin: 0;
   }
 
   .hero h1 {
-    font-size: 2rem;
+    font-size: clamp(1.7rem, 8vw, 2rem);
   }
 
   .hero p {
@@ -252,12 +267,13 @@ form input {
   .container {
     display: flex;
     flex-direction: column;
-    margin: 1rem;
+    width: 100%;
+    padding: 0.85rem;
   }
 
   .info-bar {
-    margin: 1rem;
-    margin-top: 1.5rem;
+    width: 100%;
+    padding: 0.85rem;
   }
 
   .info-bar h2 {
@@ -270,6 +286,7 @@ form input {
 }
 
 .btn {
+  margin-top: 0.45rem;
   text-align: center;
 }
 
@@ -277,7 +294,7 @@ button {
   border: none;
   cursor: pointer;
   border-radius: 0.3rem;
-  padding: 0.2rem;
+  padding: 0.35rem 0.65rem;
   outline: none;
   background-color: var(--btn-bg);
   color: var(--btn-color);
@@ -289,8 +306,8 @@ button:active {
 }
 
 footer {
-  margin-top: 2rem;
-  padding: 1rem;
+  margin-top: 0;
+  padding: clamp(0.4rem, 1.5vh, 1rem);
   text-align: center;
 }
 
@@ -298,9 +315,4 @@ footer p {
   color: var(--text-color);
   opacity: 0.7;
   font-size: 0.9rem;
-}
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh; /* Takes full screen height */
 }
